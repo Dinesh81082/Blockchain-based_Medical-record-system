@@ -22,7 +22,7 @@ function UploadRecord() {
         try {
             const token = localStorage.getItem('token');
             const res = await fetch(
-                `http://localhost:5000/api/patients?q=${encodeURIComponent(q)}`,
+                `https://blockchain-based-medical-record-system.onrender.com/api/patients?q=${encodeURIComponent(q)}`,
                 {
                     headers: { Authorization: `Bearer ${token}` }
                 }
@@ -86,7 +86,7 @@ function UploadRecord() {
         try {
             const token = localStorage.getItem('token');
 
-            const res = await fetch('http://localhost:5000/api/records/upload', {
+            const res = await fetch('https://blockchain-based-medical-record-system.onrender.com/api/records/upload', {
                 method: 'POST',
                 headers: { Authorization: `Bearer ${token}` },
                 body: formData
